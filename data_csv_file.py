@@ -1,0 +1,29 @@
+import csv
+
+
+filename = r"d:\Projects\ai_projects\Kawasaki_chatbot\kawasaki_robot_data.csv"
+
+# Data for Kawasaki robots
+robots_data = [
+["Brand", "Robot Model", "Payload (kg)", "Reach (mm)", "Description", "Manual / PDF URL"],
+["Kawasaki", "RS003N", 3, 620, "Very small R-series robot, precise small-load tasks.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS003N.pdf"],
+["Kawasaki", "RS007N", 7, 730, "Compact 6-axis R-series, good for material handling.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS007N.pdf"],
+["Kawasaki", "RS013N", 13, 1460, "Extended reach R-series.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS013N.pdf"],
+["Kawasaki", "RS015X", 15, 3150, "High reach R-series.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS015X.pdf"],
+["Kawasaki", "RS020N", 20, 1725, "Mid-size R-series.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS020N.pdf"],
+["Kawasaki", "RS080N", 80, 2100, "High payload R-series.", "https://robotics.kawasaki.com/userAssets1/productPDF/RS080N.pdf"],
+["Kawasaki", "BX100S", 100, 1634, "B-series welding robot.", "https://robotics.kawasaki.com/userAssets1/productPDF/BX100S.pdf"],
+["Kawasaki", "BX100N", 100, 2200, "B-series long reach.", "https://robotics.kawasaki.com/userAssets1/productPDF/BX100N.pdf"],
+["Kawasaki", "BX200L", 200, 2597, "Heavy material handling.", "https://robotics.kawasaki.com/userAssets1/productPDF/BX200L.pdf"],
+["Kawasaki", "BX200X", 200, 3412, "Very long reach B‑series.", "https://robotics.kawasaki.com/userAssets1/productPDF/BX200X.pdf"],
+["Kawasaki", "ZD130S / ZDE130S", 130, 3255, "High‑speed palletizing.", "https://robotics.kawasaki.com/userAssets1/productPDF/ZD130S_ZDE130S.pdf"],
+["Kawasaki", "MX350L", 350, 3018, "Ultra-heavy M-series.", "https://robotics.kawasaki.com/userAssets1/productPDF/MX350L.pdf"]
+]
+
+# Write to CSV
+with open(filename, "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(robots_data)
+
+
+print(f"CSV file '{filename}' created.")
